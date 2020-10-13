@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../project/include/countdown.h
+iostream
+-
+
+/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/1_4/countdown.cpp
+countdown.h
+/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/1_4/countdown.h
+
+/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/main.cpp
+countdown.h
+/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/countdown.h
+

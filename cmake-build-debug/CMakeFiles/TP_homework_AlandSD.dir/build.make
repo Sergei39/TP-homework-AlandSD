@@ -77,30 +77,45 @@ include CMakeFiles/TP_homework_AlandSD.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TP_homework_AlandSD.dir/flags.make
 
-CMakeFiles/TP_homework_AlandSD.dir/main.cpp.o: CMakeFiles/TP_homework_AlandSD.dir/flags.make
-CMakeFiles/TP_homework_AlandSD.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TP_homework_AlandSD.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP_homework_AlandSD.dir/main.cpp.o -c /home/sergei/Projects/Projectc++/TP-homework-AlandSD/main.cpp
+CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.o: CMakeFiles/TP_homework_AlandSD.dir/flags.make
+CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.o: ../project/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.o -c /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/main.cpp
 
-CMakeFiles/TP_homework_AlandSD.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP_homework_AlandSD.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergei/Projects/Projectc++/TP-homework-AlandSD/main.cpp > CMakeFiles/TP_homework_AlandSD.dir/main.cpp.i
+CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/main.cpp > CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.i
 
-CMakeFiles/TP_homework_AlandSD.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP_homework_AlandSD.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergei/Projects/Projectc++/TP-homework-AlandSD/main.cpp -o CMakeFiles/TP_homework_AlandSD.dir/main.cpp.s
+CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/main.cpp -o CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.s
+
+CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.o: CMakeFiles/TP_homework_AlandSD.dir/flags.make
+CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.o: ../project/1_4/countdown.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.o -c /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/1_4/countdown.cpp
+
+CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/1_4/countdown.cpp > CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.i
+
+CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/1_4/countdown.cpp -o CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.s
 
 # Object files for target TP_homework_AlandSD
 TP_homework_AlandSD_OBJECTS = \
-"CMakeFiles/TP_homework_AlandSD.dir/main.cpp.o"
+"CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.o" \
+"CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.o"
 
 # External object files for target TP_homework_AlandSD
 TP_homework_AlandSD_EXTERNAL_OBJECTS =
 
-TP_homework_AlandSD: CMakeFiles/TP_homework_AlandSD.dir/main.cpp.o
+TP_homework_AlandSD: CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.o
+TP_homework_AlandSD: CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.o
 TP_homework_AlandSD: CMakeFiles/TP_homework_AlandSD.dir/build.make
 TP_homework_AlandSD: CMakeFiles/TP_homework_AlandSD.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TP_homework_AlandSD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable TP_homework_AlandSD"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TP_homework_AlandSD.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

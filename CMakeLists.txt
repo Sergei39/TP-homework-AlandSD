@@ -3,4 +3,6 @@ project(TP_homework_AlandSD)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(TP_homework_AlandSD main.cpp)
+include_directories(project/include)
+
+add_executable(TP_homework_AlandSD project/main.cpp project/1_4/countdown.cpp)

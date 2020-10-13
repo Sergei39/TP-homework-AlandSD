@@ -143,32 +143,59 @@ TP_homework_AlandSD/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/build
 .PHONY : TP_homework_AlandSD/fast
 
-main.o: main.cpp.o
+project/1_4/countdown.o: project/1_4/countdown.cpp.o
 
-.PHONY : main.o
+.PHONY : project/1_4/countdown.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/main.cpp.o
-.PHONY : main.cpp.o
+project/1_4/countdown.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.o
+.PHONY : project/1_4/countdown.cpp.o
 
-main.i: main.cpp.i
+project/1_4/countdown.i: project/1_4/countdown.cpp.i
 
-.PHONY : main.i
+.PHONY : project/1_4/countdown.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/main.cpp.i
-.PHONY : main.cpp.i
+project/1_4/countdown.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.i
+.PHONY : project/1_4/countdown.cpp.i
 
-main.s: main.cpp.s
+project/1_4/countdown.s: project/1_4/countdown.cpp.s
 
-.PHONY : main.s
+.PHONY : project/1_4/countdown.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/main.cpp.s
-.PHONY : main.cpp.s
+project/1_4/countdown.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.s
+.PHONY : project/1_4/countdown.cpp.s
+
+project/main.o: project/main.cpp.o
+
+.PHONY : project/main.o
+
+# target to build an object file
+project/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.o
+.PHONY : project/main.cpp.o
+
+project/main.i: project/main.cpp.i
+
+.PHONY : project/main.i
+
+# target to preprocess a source file
+project/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.i
+.PHONY : project/main.cpp.i
+
+project/main.s: project/main.cpp.s
+
+.PHONY : project/main.s
+
+# target to generate assembly for a file
+project/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.s
+.PHONY : project/main.cpp.s
 
 # Help Target
 help:
@@ -179,9 +206,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... TP_homework_AlandSD"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... project/1_4/countdown.o"
+	@echo "... project/1_4/countdown.i"
+	@echo "... project/1_4/countdown.s"
+	@echo "... project/main.o"
+	@echo "... project/main.i"
+	@echo "... project/main.s"
 .PHONY : help
 
 
