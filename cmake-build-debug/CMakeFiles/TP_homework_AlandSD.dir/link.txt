@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/TP_homework_AlandSD.dir/main.cpp.o  -o TP_homework_AlandSD 
