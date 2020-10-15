@@ -1,8 +1,8 @@
-//
-// Created by sergei on 15.10.2020.
-//
-
 #ifndef TP_HOMEWORK_ALANDSD_INTERSECTION_H
 #define TP_HOMEWORK_ALANDSD_INTERSECTION_H
+
+#include <iostream>
+
+int intersection();
 
 #endif //TP_HOMEWORK_ALANDSD_INTERSECTION_H

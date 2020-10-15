@@ -4,10 +4,12 @@ int interaction_user(){
     int num = 0;
     int kill = 0;
 
+    std::cout << "Input number people and k: " << std::endl;
     std::cin >> num >> kill;
     if (num == 0)
         return 0;
 
+    std::cout << "Result: " << std::endl;
     std::cout << found_number(num, kill);
 }
 

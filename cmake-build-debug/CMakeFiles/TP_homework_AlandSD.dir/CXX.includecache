@@ -10,11 +10,15 @@
 iostream
 -
 
+../project/include/intersection.h
+iostream
+-
+
 /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/1_4/countdown.cpp
 countdown.h
 /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/1_4/countdown.h
 
-/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/main.cpp
-countdown.h
-/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/countdown.h
+/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/2_3/intersection.cpp
+intersection.h
+/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/2_3/intersection.h
 

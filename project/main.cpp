@@ -1,7 +1,5 @@
-#include "countdown.h"
+#include "intersection.h"
 
 int main() {
-    interaction_user();
-
-    return 0;
+    intersection();
 }

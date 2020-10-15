@@ -170,6 +170,33 @@ project/1_4/countdown.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.s
 .PHONY : project/1_4/countdown.cpp.s
 
+project/2_3/intersection.o: project/2_3/intersection.cpp.o
+
+.PHONY : project/2_3/intersection.o
+
+# target to build an object file
+project/2_3/intersection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/2_3/intersection.cpp.o
+.PHONY : project/2_3/intersection.cpp.o
+
+project/2_3/intersection.i: project/2_3/intersection.cpp.i
+
+.PHONY : project/2_3/intersection.i
+
+# target to preprocess a source file
+project/2_3/intersection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/2_3/intersection.cpp.i
+.PHONY : project/2_3/intersection.cpp.i
+
+project/2_3/intersection.s: project/2_3/intersection.cpp.s
+
+.PHONY : project/2_3/intersection.s
+
+# target to generate assembly for a file
+project/2_3/intersection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/2_3/intersection.cpp.s
+.PHONY : project/2_3/intersection.cpp.s
+
 project/main.o: project/main.cpp.o
 
 .PHONY : project/main.o
@@ -209,6 +236,9 @@ help:
 	@echo "... project/1_4/countdown.o"
 	@echo "... project/1_4/countdown.i"
 	@echo "... project/1_4/countdown.s"
+	@echo "... project/2_3/intersection.o"
+	@echo "... project/2_3/intersection.i"
+	@echo "... project/2_3/intersection.s"
 	@echo "... project/main.o"
 	@echo "... project/main.i"
 	@echo "... project/main.s"

@@ -5,4 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 include_directories(project/include)
 
-add_executable(TP_homework_AlandSD project/main.cpp project/1_4/countdown.cpp)
+add_executable(TP_homework_AlandSD
+        project/main.cpp
+        project/1_4/countdown.cpp
+        project/2_3/intersection.cpp)
