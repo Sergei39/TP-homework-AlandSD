@@ -94,12 +94,12 @@ clean: CMakeFiles/TP_homework_AlandSD.dir/clean
 CMakeFiles/TP_homework_AlandSD.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target TP_homework_AlandSD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target TP_homework_AlandSD"
 .PHONY : CMakeFiles/TP_homework_AlandSD.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TP_homework_AlandSD.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TP_homework_AlandSD.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/TP_homework_AlandSD.dir/rule

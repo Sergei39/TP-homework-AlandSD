@@ -197,6 +197,60 @@ project/2_3/intersection.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/2_3/intersection.cpp.s
 .PHONY : project/2_3/intersection.cpp.s
 
+project/3_2/dek_array.o: project/3_2/dek_array.cpp.o
+
+.PHONY : project/3_2/dek_array.o
+
+# target to build an object file
+project/3_2/dek_array.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.o
+.PHONY : project/3_2/dek_array.cpp.o
+
+project/3_2/dek_array.i: project/3_2/dek_array.cpp.i
+
+.PHONY : project/3_2/dek_array.i
+
+# target to preprocess a source file
+project/3_2/dek_array.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.i
+.PHONY : project/3_2/dek_array.cpp.i
+
+project/3_2/dek_array.s: project/3_2/dek_array.cpp.s
+
+.PHONY : project/3_2/dek_array.s
+
+# target to generate assembly for a file
+project/3_2/dek_array.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.s
+.PHONY : project/3_2/dek_array.cpp.s
+
+project/3_2/dek_list.o: project/3_2/dek_list.cpp.o
+
+.PHONY : project/3_2/dek_list.o
+
+# target to build an object file
+project/3_2/dek_list.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.o
+.PHONY : project/3_2/dek_list.cpp.o
+
+project/3_2/dek_list.i: project/3_2/dek_list.cpp.i
+
+.PHONY : project/3_2/dek_list.i
+
+# target to preprocess a source file
+project/3_2/dek_list.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.i
+.PHONY : project/3_2/dek_list.cpp.i
+
+project/3_2/dek_list.s: project/3_2/dek_list.cpp.s
+
+.PHONY : project/3_2/dek_list.s
+
+# target to generate assembly for a file
+project/3_2/dek_list.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TP_homework_AlandSD.dir/build.make CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.s
+.PHONY : project/3_2/dek_list.cpp.s
+
 project/main.o: project/main.cpp.o
 
 .PHONY : project/main.o
@@ -239,6 +293,12 @@ help:
 	@echo "... project/2_3/intersection.o"
 	@echo "... project/2_3/intersection.i"
 	@echo "... project/2_3/intersection.s"
+	@echo "... project/3_2/dek_array.o"
+	@echo "... project/3_2/dek_array.i"
+	@echo "... project/3_2/dek_array.s"
+	@echo "... project/3_2/dek_list.o"
+	@echo "... project/3_2/dek_list.i"
+	@echo "... project/3_2/dek_list.s"
 	@echo "... project/main.o"
 	@echo "... project/main.i"
 	@echo "... project/main.s"

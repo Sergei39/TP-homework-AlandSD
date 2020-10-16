@@ -7,6 +7,5 @@ CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.o: ../project/1_4/c
 CMakeFiles/TP_homework_AlandSD.dir/project/2_3/intersection.cpp.o: ../project/include/intersection.h
 CMakeFiles/TP_homework_AlandSD.dir/project/2_3/intersection.cpp.o: ../project/2_3/intersection.cpp
 
-CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.o: ../project/include/intersection.h
 CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.o: ../project/main.cpp
 

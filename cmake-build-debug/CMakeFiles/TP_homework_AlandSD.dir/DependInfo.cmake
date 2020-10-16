@@ -6,6 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/1_4/countdown.cpp" "/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.o"
   "/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/2_3/intersection.cpp" "/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles/TP_homework_AlandSD.dir/project/2_3/intersection.cpp.o"
+  "/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/3_2/dek_array.cpp" "/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.o"
+  "/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/3_2/dek_list.cpp" "/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.o"
   "/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/main.cpp" "/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

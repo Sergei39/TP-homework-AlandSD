@@ -116,11 +116,39 @@ CMakeFiles/TP_homework_AlandSD.dir/project/2_3/intersection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP_homework_AlandSD.dir/project/2_3/intersection.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/2_3/intersection.cpp -o CMakeFiles/TP_homework_AlandSD.dir/project/2_3/intersection.cpp.s
 
+CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.o: CMakeFiles/TP_homework_AlandSD.dir/flags.make
+CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.o: ../project/3_2/dek_array.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.o -c /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/3_2/dek_array.cpp
+
+CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/3_2/dek_array.cpp > CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.i
+
+CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/3_2/dek_array.cpp -o CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.s
+
+CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.o: CMakeFiles/TP_homework_AlandSD.dir/flags.make
+CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.o: ../project/3_2/dek_list.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.o -c /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/3_2/dek_list.cpp
+
+CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/3_2/dek_list.cpp > CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.i
+
+CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/3_2/dek_list.cpp -o CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.s
+
 # Object files for target TP_homework_AlandSD
 TP_homework_AlandSD_OBJECTS = \
 "CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.o" \
 "CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.o" \
-"CMakeFiles/TP_homework_AlandSD.dir/project/2_3/intersection.cpp.o"
+"CMakeFiles/TP_homework_AlandSD.dir/project/2_3/intersection.cpp.o" \
+"CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.o" \
+"CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.o"
 
 # External object files for target TP_homework_AlandSD
 TP_homework_AlandSD_EXTERNAL_OBJECTS =
@@ -128,9 +156,11 @@ TP_homework_AlandSD_EXTERNAL_OBJECTS =
 TP_homework_AlandSD: CMakeFiles/TP_homework_AlandSD.dir/project/main.cpp.o
 TP_homework_AlandSD: CMakeFiles/TP_homework_AlandSD.dir/project/1_4/countdown.cpp.o
 TP_homework_AlandSD: CMakeFiles/TP_homework_AlandSD.dir/project/2_3/intersection.cpp.o
+TP_homework_AlandSD: CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_array.cpp.o
+TP_homework_AlandSD: CMakeFiles/TP_homework_AlandSD.dir/project/3_2/dek_list.cpp.o
 TP_homework_AlandSD: CMakeFiles/TP_homework_AlandSD.dir/build.make
 TP_homework_AlandSD: CMakeFiles/TP_homework_AlandSD.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable TP_homework_AlandSD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sergei/Projects/Projectc++/TP-homework-AlandSD/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable TP_homework_AlandSD"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TP_homework_AlandSD.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

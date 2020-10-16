@@ -8,4 +8,6 @@ include_directories(project/include)
 add_executable(TP_homework_AlandSD
         project/main.cpp
         project/1_4/countdown.cpp
-        project/2_3/intersection.cpp)
+        project/2_3/intersection.cpp
+        project/3_2/dek_array.cpp
+        project/3_2/dek_list.cpp)

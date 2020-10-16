@@ -92,6 +92,12 @@
 		<Unit filename="/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/2_3/intersection.cpp">
 			<Option target="TP_homework_AlandSD"/>
 		</Unit>
+		<Unit filename="/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/3_2/dek_array.cpp">
+			<Option target="TP_homework_AlandSD"/>
+		</Unit>
+		<Unit filename="/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/3_2/dek_list.cpp">
+			<Option target="TP_homework_AlandSD"/>
+		</Unit>
 		<Unit filename="/home/sergei/Projects/Projectc++/TP-homework-AlandSD/project/main.cpp">
 			<Option target="TP_homework_AlandSD"/>
 		</Unit>
