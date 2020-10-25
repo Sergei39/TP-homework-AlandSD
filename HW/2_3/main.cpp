@@ -1,4 +1,10 @@
-#include "intersection.h"
+/**Даны два массива неповторяющихся целых чисел, упорядоченные по возрастанию.
+ * A[0..n-1] и B[0..m-1]. n » m. Найдите их пересечение. Требуемое время работы:
+ * O(m * log k), где k - позиция элементта B[m-1] в массиве A..
+ * В процессе поиска очередного элемента B[i] в массиве A пользуйтесь результатом поиска элемента
+ * B[i-1]. n, k ≤ 10000.**/
+
+#include <iostream>
 
 int looking_number(int *arr, int size, int number) {
     bool flag = false;
@@ -20,11 +26,10 @@ int looking_number(int *arr, int size, int number) {
     return mid;
 }
 
-int intersection() {
+int main() {
     int n_size = 0;
     int m_size = 0;
     int res_size = 0;
-    std::cout << "Input size_arr array1 and array2" << std::endl;
     std::cin >> n_size >> m_size;
 
     int *n_arr, *m_arr, *res;
@@ -32,11 +37,9 @@ int intersection() {
     m_arr = new int[m_size];
     res = new int[n_size];
 
-    std::cout << "Input element array1" << std::endl;
     for (int i = 0; i < n_size; i++)
         std::cin >> n_arr[i];
 
-    std::cout << "Input element array2" << std::endl;
     for (int i = 0; i < m_size; i++)
         std::cin >> m_arr[i];
 
@@ -54,7 +57,6 @@ int intersection() {
         }
     }
 
-    std::cout << "Result: " << std::endl;
     for (int i = 0; i < res_size; i++)
         std::cout << res[i] << std::endl;
 
