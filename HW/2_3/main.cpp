@@ -26,10 +26,28 @@ int looking_number(int *arr, int size, int number) {
     return mid;
 }
 
+// возвращает размер массива пересечения
+int get_crossing(int* n_arr, int n_size, int* m_arr, int m_size, int* res) {
+    int min_index_n_arr = 0;
+    int max_index_n_arr = n_size - 1;
+    int res_size = 0;
+
+    for (int i = 0; i < m_size; i++) {
+        int index = looking_number(n_arr + min_index_n_arr, max_index_n_arr + 1 - min_index_n_arr, m_arr[i]);
+
+        if (index > -1) {
+            res[res_size] = m_arr[i];
+            min_index_n_arr += index + 1;
+            res_size++;
+        }
+    }
+
+    return res_size;
+}
+
 int main() {
     int n_size = 0;
     int m_size = 0;
-    int res_size = 0;
     std::cin >> n_size >> m_size;
 
     int *n_arr, *m_arr, *res;
@@ -43,19 +61,7 @@ int main() {
     for (int i = 0; i < m_size; i++)
         std::cin >> m_arr[i];
 
-    int min_index_n_arr = 0;
-
-    int max_index_n_arr = n_size - 1;
-
-    for (int i = 0; i < m_size; i++) {
-        int index = looking_number(n_arr + min_index_n_arr, max_index_n_arr + 1 - min_index_n_arr, m_arr[i]);
-
-        if (index > -1) {
-            res[res_size] = m_arr[i];
-            min_index_n_arr += index + 1;
-            res_size++;
-        }
-    }
+    int res_size = get_crossing(n_arr, n_size, m_arr, m_size, res);
 
     for (int i = 0; i < res_size; i++)
         std::cout << res[i] << std::endl;

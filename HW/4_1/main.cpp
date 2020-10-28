@@ -225,23 +225,13 @@ T Heap<T>::ExtractMax()
 }
 
 
-int main() {
-    int number = 0;
-    std::cin >> number;
-    Array<int> array;
-
-    for(int i = 0; i < number; i++) {
-        int val = 0;
-        std::cin >> val;
-        array.push(val);
-    }
-
+int number_approaches(Array<int> array) {
     Heap<int> heap(array);
 
     int k = 0;
     std::cin >> k;
 
-    number = 0;
+    int number = 0;
     while(!heap.IsEmpty()) {
         number++;
         int sum = 0;
@@ -258,7 +248,21 @@ int main() {
         }
     }
 
-    std::cout << number;
+    return number;
+}
+
+int main() {
+    int number = 0;
+    std::cin >> number;
+    Array<int> array;
+
+    for(int i = 0; i < number; i++) {
+        int val = 0;
+        std::cin >> val;
+        array.push(val);
+    }
+
+    std::cout << number_approaches(array);
 
     return 0;
 }
