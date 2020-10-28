@@ -1,5 +1,8 @@
 #include <iostream>
+#include <cstring>
+
 /*
+
 int Partition( int* a, int n ) {
     if ( n <= 1 ) {
         return 0;
@@ -36,12 +39,14 @@ int main() {
 */
 
 void CountionSort1( int* a, int n ) {
-    int k = a[0]; // k >> n - лучше сравнением за n log n
+    int k = a[0]; // k >> n - лучше сравнением за n log n (сортировка подсчетом не очень)
                     // k ~ n - лучше подсчетом
     for( int i = 0; i < n; ++i )
         k = std::max( k, a[i] );
     ++k;
-    int* c = new int[k + 1];
+
+
+    /*int* c = new int[k];
     for( int i = 0; i < k; ++i )
         c[i] = 0;
     for( int i = 0; i < n; ++i )
@@ -51,7 +56,23 @@ void CountionSort1( int* a, int n ) {
         for( int j = 0; j < c[i]; ++j )
             a[pos++] = i;
     }
+    delete [] c;*/
+
+    int* c = new int[k];
+    for( int i = 0; i < k; ++i )
+        c[i] = 0;
+    for( int i = 0; i < n; ++i )
+        ++c[a[i]];
+    for( int i = 1; i < k; ++i ) {
+        c[i] += c[i - 1];
+    }
+    int* b = new int[n];
+    for( int i = n - 1; i >= 0; --i ) {
+        b[--c[a[i]]] = a[i];
+    }
     delete [] c;
+    memcpy( a, b, n * sizeof( int ) );
+    delete [] b;
 }
 
 int main() {
