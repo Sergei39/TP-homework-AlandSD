@@ -113,16 +113,15 @@ void Array<T>::delete_last() {
 template<class T>
 class Heap {
 public:
-    Heap() = delete;
     Heap(Heap& h) = delete;
     explicit Heap(const Array<T>& _array);
     ~Heap() = default;
 // Добавить элемент в кучу за
-    void Insert(T element);
+    void Insert(const T& element);
 // Извлечь максимум из кучи за
     T ExtractMax();
 // Посмотреть значение максимума в куче за
-    T PeekMax();
+    const T& PeekMax();
 
     bool IsEmpty() { return array.IsEmpty(); }
 private:
@@ -158,7 +157,7 @@ void Heap<T>::delete_last() {
 }
 
 template<class T>
-T Heap<T>::PeekMax() {
+const T& Heap<T>::PeekMax() {
     assert(!array.IsEmpty());
     return array[0];
 }
@@ -202,7 +201,7 @@ void Heap<T>::siftUp( int index )
 }
 
 template<class T>
-void Heap<T>::Insert( T element )
+void Heap<T>::Insert( const T& element )
 {
     add(element);
     siftUp(array.get_size() - 1);

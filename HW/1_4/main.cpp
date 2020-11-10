@@ -10,19 +10,18 @@
 #include <iostream>
 
 struct list {
+    explicit list (int value_) : value(value_), point(nullptr) {};
     int value;
     list *point;
 };
 
 int get_num (int num, int kill) {
-    list *first = new list;
+    list *first = new list(1);
     list *tec = first;
     tec->point = first;
-    tec->value = 1;
     for (int i = 2; i <= num; i++) {
-        tec->point = new list;
+        tec->point = new list(i);
         tec = tec->point;
-        tec->value = i;
         tec->point = first;
     }
 
@@ -34,11 +33,11 @@ int get_num (int num, int kill) {
         list *del = tec->point;
         tec->point = del->point;
         tec = tec->point;
-        free(del);
+        delete del;
     }
 
     int res =  tec->value;
-    free(tec);
+    delete tec;
 
     return res;
 }

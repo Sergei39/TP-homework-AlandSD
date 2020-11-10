@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-int looking_number(int *arr, int size, int number) {
+int looking_number(const int *arr, int size, int number) {
     bool flag = false;
     int l = 0;
     int r = size - 1;
@@ -31,6 +31,20 @@ int get_crossing(int* n_arr, int n_size, int* m_arr, int m_size, int* res) {
     int min_index_n_arr = 0;
     int max_index_n_arr = n_size - 1;
     int res_size = 0;
+
+    // определяем диапоазно степенями двойки
+    for (int count = 1; count < n_size && n_arr[count] < m_arr[m_size - 1]; count *= 2) {
+        if (n_arr[count] < m_arr[0])
+            min_index_n_arr = count;
+        max_index_n_arr = count;
+    }
+    if (min_index_n_arr == 1)
+        min_index_n_arr = 0;
+    if (max_index_n_arr * 2 < n_size)
+        max_index_n_arr *= 2;
+    else
+        max_index_n_arr = n_size - 1;
+
 
     for (int i = 0; i < m_size; i++) {
         int index = looking_number(n_arr + min_index_n_arr, max_index_n_arr + 1 - min_index_n_arr, m_arr[i]);

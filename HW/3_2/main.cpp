@@ -24,6 +24,7 @@ template <class T>
 class Dec{
 public:
     Dec();
+    Dec(Dec& dec) = delete;
     ~Dec();
 
     void push_back(const T &value);
