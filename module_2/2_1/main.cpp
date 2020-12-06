@@ -7,6 +7,8 @@ using std::stack;
 class BinTree {
 public:
     BinTree();
+    BinTree( const BinTree& ) = delete;
+    BinTree& operator=( const BinTree& ) = delete;
     ~BinTree();
 
     void Add(int key);
