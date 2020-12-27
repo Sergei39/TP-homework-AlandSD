@@ -5,7 +5,7 @@
 #include <cassert>
 #include <stack>
 
-//#include "Huffman.h"
+#include "Huffman.h"
 
 using std::vector;
 
@@ -128,8 +128,8 @@ public:
     explicit Heap(Cmp& l);
     ~Heap() = default;
     void Insert(const T& element);
-    T ExtractMax();
-    const T& PeekMax();
+    T ExtractHead();
+    const T& PeekHead();
 
     int size() const;
 
@@ -166,7 +166,7 @@ void Heap<T, Cmp>::delete_last() {
 }
 
 template<class T, class Cmp>
-const T& Heap<T, Cmp>::PeekMax() {
+const T& Heap<T, Cmp>::PeekHead() {
     assert(!array.empty());
     return array[0];
 }
@@ -217,7 +217,7 @@ void Heap<T, Cmp>::Insert( const T& element )
 }
 
 template<class T, class Cmp>
-T Heap<T, Cmp>::ExtractMax()
+T Heap<T, Cmp>::ExtractHead()
 {
     assert(!array.empty());
 // Запоминаем значение корня.
@@ -252,6 +252,9 @@ struct Node {
 
     template<typename F, typename G>
     void InOrder2(F VisitList, G VisitNode);
+
+    template<typename T>
+    static void PostOrder(Node* node, T NodeVisit);
 };
 
 // TODO что то сделать с этим методом
@@ -279,6 +282,16 @@ void Node::InOrder2(F VisitList, G VisitNode) {
     }
 }
 
+template<typename T>
+void Node::PostOrder(Node* node, T NodeVisit) {
+    if(node == nullptr)
+        return;
+
+    PostOrder(node->Left, NodeVisit);
+    PostOrder(node->Right, NodeVisit);
+    NodeVisit(node);
+}
+
 
 template<class T>
 class CmpDef {
@@ -288,27 +301,32 @@ public:
 
 
 void encode(InBitsStream& input, OutBitsStream& output) {
-    std::array<int, 256> bytes{0};
-    for (int i = 0; i * 8 < input.GetBitCount(); i++)
-        bytes[input.ReadByte()]++;
+    static const int SIZE_ELEM = 256; // кол-во вариаций байта
+
+    std::array<int, SIZE_ELEM> bytes{};
+    for (int i = 0; i < SIZE_ELEM; ++i)
+        bytes[i] = 0;
+    for (int i = 0; i * 8 < input.GetBitCount(); ++i)
+        ++bytes[input.ReadByte()];
 
     CmpDef<Node> less;
     Heap<Node*, CmpDef<Node>> heap(less);
-    for (int i = 0; i < 256; i++)
+    for (int i = 0; i < SIZE_ELEM; ++i)
         if (bytes[i] != 0) {
             heap.Insert(new Node(bytes[i], i));
         }
 
     while (heap.size() > 1) {
-        Node* min1 = heap.ExtractMax();
-        Node* min2 = heap.ExtractMax();
+        Node* min1 = heap.ExtractHead();
+        Node* min2 = heap.ExtractHead();
 
         Node* n = new Node(min1->P + min2->P, min1, min2);
         heap.Insert(n);
     }
 
-    std::array<vector<Byte>, 256> code{};
-    Node* root = heap.PeekMax();
+    std::array<vector<Byte>, SIZE_ELEM> code{};
+
+    Node* root = heap.PeekHead();
 
     vector<Byte> c;
     root->InOrder(c, code.data());
@@ -324,12 +342,13 @@ void encode(InBitsStream& input, OutBitsStream& output) {
 
     // считаем сколько будет в конце не значищих битов
     unsigned long numberBit = 0;
-    for (int i = 0; i < 256; i++) {
+    for (int i = 0; i < SIZE_ELEM; ++i) {
         numberBit += bytes[i] * code[i].size();
     }
     Byte nullBit = 8 - ((output.GetBitCount() + numberBit) % 8);
+    nullBit = nullBit == 8? 0: nullBit;
     output.WriteByte(nullBit);
-    for (int i = 0; i < nullBit; i++)
+    for (int i = 0; i < nullBit; ++i)
         output.WriteBit(0);
 
     // запись закодированного потока
@@ -340,6 +359,7 @@ void encode(InBitsStream& input, OutBitsStream& output) {
             output.WriteBit(j);
     }
 
+    Node::PostOrder(root, [](Node* node) {delete node;});
 }
 
 void decode(InBitsStream& input, OutBitsStream& output) {
@@ -380,79 +400,81 @@ void decode(InBitsStream& input, OutBitsStream& output) {
 
         bit = input.ReadBit();
     }
+
+    Node::PostOrder(root, [](Node* node) {delete node;});
 }
 
 
 // для тестов в контексте
-//void Encode(IInputStream& original, IOutputStream& compressed) {
-//    Byte value;
-//    vector<Byte> text;
-//    while (original.Read(value))
-//    {
-//        text.push_back(value);
-//    }
-//
-//    InBitsStream input(text.data(), text.size());
-//    OutBitsStream output;
-//    encode(input, output);
-//
-//    const Byte* data = output.GetBuffer();
-//
-//    for (int i = 0; i < text.size(); i++)
-//        compressed.Write(data[i]);
-//}
-//
-//void Decode(IInputStream& compressed, IOutputStream& original) {
-//    Byte value;
-//    vector<Byte> text;
-//    while (compressed.Read(value))
-//    {
-//        text.push_back(value);
-//    }
-//
-//    InBitsStream input(text.data(), text.size());
-//    OutBitsStream output;
-//    decode(input, output);
-//
-//    const Byte* data = output.GetBuffer();
-//
-//    for (int i = 0; i < text.size(); i++)
-//        original.Write(data[i]);
-//}
+void Encode(IInputStream& original, IOutputStream& compressed) {
+    Byte value;
+    vector<Byte> text;
+    while (original.Read(value))
+    {
+        text.push_back(value);
+    }
+
+    InBitsStream input(text.data(), text.size());
+    OutBitsStream output;
+    encode(input, output);
+
+    const Byte* data = output.GetBuffer();
+
+    for (int i = 0; i < text.size(); i++)
+        compressed.Write(data[i]);
+}
+
+void Decode(IInputStream& compressed, IOutputStream& original) {
+    Byte value;
+    vector<Byte> text;
+    while (compressed.Read(value))
+    {
+        text.push_back(value);
+    }
+
+    InBitsStream input(text.data(), text.size());
+    OutBitsStream output;
+    decode(input, output);
+
+    const Byte* data = output.GetBuffer();
+
+    for (int i = 0; i < text.size(); i++)
+        original.Write(data[i]);
+}
 
 
 
 
 
 // чтобы тестить в коде
-int main() {
-    OutBitsStream outCoder;
-    outCoder.WriteByte('a');
-    outCoder.WriteByte('b');
-    outCoder.WriteByte('a');
-    outCoder.WriteByte('c');
-    outCoder.WriteByte('a');
-    outCoder.WriteByte('f');
-    outCoder.WriteByte('\n');
-
-    InBitsStream inputCoder(outCoder.GetBuffer(), outCoder.GetBitCount());
-
-    OutBitsStream coder;
-    encode(inputCoder, coder);
-
-
-    InBitsStream inputDecoder(coder.GetBuffer(), coder.GetBitCount());
-
-//    for(int i = 0; i < inputDecoder.GetBitCount(); i++)
-//        std::cout << (int)inputDecoder.ReadBit();
-//    inputDecoder.Seek(0);
-
-    OutBitsStream decoder;
-    decode(inputDecoder, decoder);
-
-    InBitsStream dec(decoder.GetBuffer(), decoder.GetBitCount());
-    for(int i = 0; i * 8 < dec.GetBitCount(); i++)
-        std::cout << dec.ReadByte() << std::endl;
-
-    return 0;
-}
+//int main() {
+//    OutBitsStream outCoder;
+//    outCoder.WriteByte('a');
+//    outCoder.WriteByte('b');
+//    outCoder.WriteByte('a');
+//    outCoder.WriteByte('c');
+//    outCoder.WriteByte('a');
+//    outCoder.WriteByte('f');
+//    outCoder.WriteByte('\n');
+//
+//    InBitsStream inputCoder(outCoder.GetBuffer(), outCoder.GetBitCount());
+//
+//    OutBitsStream coder;
+//    encode(inputCoder, coder);
+//
+//
+//    InBitsStream inputDecoder(coder.GetBuffer(), coder.GetBitCount());
+//
+////    for(int i = 0; i < inputDecoder.GetBitCount(); i++)
+////        std::cout << (int)inputDecoder.ReadBit();
+////    inputDecoder.Seek(0);
+//
+//    OutBitsStream decoder;
+//    decode(inputDecoder, decoder);
+//
+//    InBitsStream dec(decoder.GetBuffer(), decoder.GetBitCount());
+//    for(int i = 0; i * 8 < dec.GetBitCount(); i++)
+//        std::cout << dec.ReadByte() << std::endl;
+//
+//    return 0;
+//}

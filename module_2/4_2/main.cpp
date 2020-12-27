@@ -23,7 +23,7 @@ private:
         unsigned char CountNode;
         Node* Left;
         Node* Right;
-        explicit Node(T key) { Key = key; Left = Right = 0; Height = 1; CountNode = 1;}
+        explicit Node(T key) { Key = key; Left = Right = nullptr; Height = 1; CountNode = 1;}
     };
 
     Node* root;
@@ -52,7 +52,7 @@ private:
 
 template<class T, class Cmp>
 unsigned char AvlTree<T, Cmp>::height(Node* p) {
-    return p?p->Height:0;
+    return p != nullptr? p->Height: 0;
 }
 
 template<class T, class Cmp>
@@ -64,7 +64,7 @@ template<class T, class Cmp>
 void  AvlTree<T, Cmp>::fixHeight(Node* p) {
     unsigned char hl = height(p->Left);
     unsigned char hr = height(p->Right);
-    p->Height = (hl>hr?hl:hr)+1;
+    p->Height = (hl>hr? hl: hr) + 1;
 }
 
 template<class T, class Cmp>
@@ -76,7 +76,7 @@ void  AvlTree<T, Cmp>::fixCountNode(Node* p) {
 
 template<class T, class Cmp>
 unsigned char AvlTree<T, Cmp>::countNode(Node* p) {
-    return p?p->CountNode:0;
+    return p != nullptr? p->CountNode: 0;
 }
 
 template<class T, class Cmp>
@@ -184,7 +184,7 @@ typename AvlTree<T, Cmp>::Node* AvlTree<T, Cmp>::findRemoveMax(Node*& p, Node* p
 template<class T, class Cmp>
 typename AvlTree<T, Cmp>::Node* AvlTree<T, Cmp>::remove(Node* p, T k, Cmp less) // удаление ключа k из дерева p
 {
-    if( !p ) return 0;
+    if( !p ) return nullptr;
     if( less(k, p->Key) )
         p->Left = remove(p->Left, k);
     else if( less(p->Key, k) )
@@ -285,7 +285,7 @@ int main() {
     for(int i = 0; i < number; ++i) {
         int val = 0;
         cin >> val;
-        if(val > 0)
+        if(val >= 0)
             tree.Add(val);
         else
             tree.Remove(abs(val));
